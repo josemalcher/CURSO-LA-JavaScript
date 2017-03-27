@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 1- Funções</title>
+
+    <script type="text/javascript">
+    // declarativa
+        function escrever(texto,cor,tamanho) {
+            document.write("<h1>" + texto + "</h1>");
+        }
+        function ola() {
+            alert("Olá");
+        }
+
+        //função anônima
+        x = new Function("texto","document.write(texto);");
+        //x = new Funcion(args, body)
+
+        //escrever(typeof (x));
+
+        x("Teste de função anônima");
+        escrever("Teste de função 01");
+        escrever("Teste 2 de função");
+        ola();
+
+        //Literal ( não há contrutor e nem declaração do nome
+        ler = function (texto) {
+            alert(texto)
+
+        }
+        ler("FUnção literal ")
+
+
+    </script>
+
+</head>
+<body>
+<div onclick="escrever('Teste de texto na div')">
+    TESTE AQUI!
+</div>
+</body>
+</html>
