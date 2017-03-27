@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 20 - This</title>
+
+    <script type="text/javascript">
+
+        function copo(c, f, m) {
+            this.cor = c;
+            this.formato = f;
+            this.material = m;
+        }
+        function copo2(c, f, m) {
+            cor = c;
+            formato = f;
+            material = m;
+        }
+
+        var x = new copo("AZUL", "Cônico", "VIDRO");
+
+
+        ler = function (texto) {
+            alert(texto);
+
+        }
+
+        ler(typeof(x)); //object
+        //ler(x.cor); // em copo2 - "indefinido"
+        ler(x.cor);
+
+        function clicar(valor) {
+            alert(valor);
+        }
+
+    </script>
+
+
+</head>
+<body>
+<ul>
+    <li onclick="alert(this)">Home</li>
+    <li>Serviços</li>
+    <br>
+    <input type="text" onfocus="clicar(this.value)" value="teste1" />
+    <input type="text" onfocus="clicar(this.value)" value="teste2" />
+</ul>
+</body>
+</html>
