@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 29 - Objetos - Date</title>
+    <script type="text/javascript">
+
+      /*  var data = new Date();
+        document.write("<h2>" + data + "</h2>");*/
+
+        function guardaData(a,m,d) {
+            this.ano = a;
+            this.mes = m;
+            this.dia = d;
+        }
+
+        var data = new guardaData(2017,03,31);
+    //    document.write("<p>"+data.constructor + "</p>");
+
+        //Crianção de uma propriedade
+        guardaData.prototype.diadasemana=null;
+
+        //;Criar um elemento de validação
+        var d = new Date(data.ano, data.mes,data.dia);
+        var dia = d.getDay();
+        document.write(dia);
+
+        //convertendo os valors numéridos para extenso
+        if(dia == 0){
+            data.diadasemana = "Domingo";
+        }else if(dia == 1){
+            data.diadasemana = "SEGUNDA";
+        }else if(dia == 2){
+            data.diadasemana = "Terça";
+        }else if(dia == 3){
+            data.diadasemana = "Quarta";
+        }else if(dia == 4){
+            data.diadasemana = "Quinta";
+        }else if(dia == 5){
+            data.diadasemana = "Sexta";
+        }else if(dia == 6){
+            data.diadasemana = "Sabado";
+        }
+
+        document.write("<h1>" + data.diadasemana + "</h1>");
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
