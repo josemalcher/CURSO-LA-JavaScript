@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 25 - Tratamento de Exceções</title>
+    <script type="text/javascript">
+
+        /*
+            Dados comuns de Erro:
+            - nome
+            - message
+            - toString();
+            COMANDOS:
+            - try -> tente
+            - catch -> Deu Erro? Então faz o catch
+            - finaly -> Executa de qua quer jeito
+            - throw -> Criar exceções (Erros artificiais)
+         */
+
+        try{
+            total = x + y;
+        }catch (e){
+            alert(e.toString());
+
+        }finally {
+            document.title = "ERRO CORRIGIDO COM SUCESSO";
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
