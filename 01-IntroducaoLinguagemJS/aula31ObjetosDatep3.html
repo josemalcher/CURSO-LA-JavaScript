@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 31 - Objetos Date Parte 3</title>
+
+    <script type="text/javascript">
+
+        var data = new Date(2017,4,3,18,5,30);
+        var horas = data.getHours();
+        Date.prototype.msg = null;
+
+        if (horas >= 6 && horas < 12) {
+            data.msg = "Bom dia";
+        } else if (horas >= 12 && horas <= 18) {
+            data.msg = "Boa Tarde";
+        } else {
+            data.msg = "Boa noite";
+        }
+
+        document.write("<h1>" + data.msg + "</h1>");
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
