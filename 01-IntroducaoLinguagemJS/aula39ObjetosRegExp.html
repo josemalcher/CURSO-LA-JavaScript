@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Aula 39 - Objetos RegExp</title>
+    <script type="text/javascript">
+
+        //var x = new RegExp("Comunidade");
+        var x = /Comunidade/;
+        document.write("<h1>" + x.test("Comunidade") + "</h1>");
+
+        var y = /qual/i;
+        document.write("<h1>" + y.exec("Qual é o melhor teste, cada qual no seu lugar") + "</h1>");
+
+        /**
+         * Modificadores
+         * i = Trata o texto de uma única forma
+         * g = Encontra todas as ocorrências
+         * m = Fazer a varredura em váias linhas
+         */
+
+        var z = new String("Qual é o melhor teste, cada qual no seu lugar, qual quer um!");
+        document.write("<h1>" + z.match(/qual/ig) + "</h1>");
+
+        /**
+         *  MetaCaracteres:
+         *  . = Ocorrência de qualquer caracter
+         *  \w = Ocorrência de caracteres [a-z][0-9]
+         *  \s = Ocorrência de espaços
+         *  \d = Ocorrência de números
+         *  ^ = Incica o controle de inicio
+         *  $ = Indica o controle no final
+         *
+         */
+        //Validação
+        var testada = "1Curso de CSS";
+        var validacao = /^\d./ig;
+        document.write("<h1>" + validacao.test(testada) + "</h1>");
+
+        var testada = "4444-4444";
+        var validacao = /^\d\d\d\d-\d\d\d\d$/ig;
+        document.write("<h1>" + validacao.test(testada) + "</h1>");
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
