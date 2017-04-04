@@ -14,8 +14,15 @@
         }
 
         function fecharPopUP() {
+            clearInterval(t);
             x1.close();
         }
+
+        /*var t = setInterval("popup()",5000);
+        var z = setInterval("fecharPopUP()",6000);*/
+        var t = setInterval("popup()",5000)
+
+
 
 
     </script>
@@ -24,7 +31,7 @@
 
     <input onclick="popup()" type="button" value="Abrir PopUP" />
 
-    <input onclick="fecharPopUP()" type="button" value="FECHAR PopUP" />
+    <input onclick="fecharPopUP()" type="button" value="FECHAR PopUP e Delisgar o intervalo" />
 
 </body>
 </html>
