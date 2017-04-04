@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 42 - Objetos Window</title>
+    <script type="text/javascript">
+
+        /*function popup() {
+            window.open("http://josemalcher.net","window","innerWidth=500,height=500,left=80,top=200");
+        }*/
+
+        function popup() {
+           x1 =  window.open("http://josemalcher.net","window","innerWidth=500,height=500,left=80,top=200");
+        }
+
+        function fecharPopUP() {
+            x1.close();
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <input onclick="popup()" type="button" value="Abrir PopUP" />
+
+    <input onclick="fecharPopUP()" type="button" value="FECHAR PopUP" />
+
+</body>
+</html>
