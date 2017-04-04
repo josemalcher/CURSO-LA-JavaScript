@@ -27,7 +27,7 @@
          *  . = Ocorrência de qualquer caracter
          *  \w = Ocorrência de caracteres [a-z][0-9]
          *  \s = Ocorrência de espaços
-         *  \d = Ocorrência de números
+         *  \d{4} = Ocorrência de números
          *  ^ = Incica o controle de inicio
          *  $ = Indica o controle no final
          *
@@ -40,6 +40,30 @@
         var testada = "4444-4444";
         var validacao = /^\d\d\d\d-\d\d\d\d$/ig;
         document.write("<h1>" + validacao.test(testada) + "</h1>");
+
+        /**
+         *  Quantificadores
+         *  * = 0 < Solicitação do meta caractere(s)
+         *  + = 1 < n
+         *  ?
+         *  {}
+         *
+         */
+        //Validação de Telefone
+        var testada = "4444-4444";
+        var validacao = /^\d{4,6}-\d{4}$/ig;
+        document.write("<h1> Telefone = " + validacao.test(testada) + "</h1>");
+
+        //Validação de Data
+        var testada = "12-08-1984";
+        var validacao = /^\d{2}.{1}\d{2}.{1}\d{2,4}/ig;
+        document.write("<h1> DATA = " + validacao.test(testada) + "</h1>");
+
+        //Validação de Email
+        var testada = "contato@josemalcher.net";
+        var validacao = /\w+@\w+.\w{2,3}/ig;
+        document.write("<h1> Email = " + validacao.test(testada) + "</h1>");
+
 
 
     </script>
