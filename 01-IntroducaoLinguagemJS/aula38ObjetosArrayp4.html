@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 38 - Objetos Array Parte 4</title>
+
+    <script type="text/javascript">
+
+        // https://www.w3schools.com/jsref/jsref_obj_array.asp
+
+        var dados = new Array("Jose Malcher", "32");
+
+        //Every + Some
+        function debug(e, i, o) {
+            return typeof (e) == "string";
+        }
+        document.write("<h2>" + dados + "</h2>");
+
+        //Filter
+        function filtro(e, i, o) {
+            return (e >= 10);
+        }
+        var dadosFiltrados = [12,5,8,130,44].filter(filtro);
+        document.write("<h2>" + dadosFiltrados + "</h2>");
+
+        //MAP
+        function returnInt(eLement) {
+            return parseInt((eLement, 10));
+        }
+        function uppercase(e, i, o) {
+            return (e = e.toUpperCase());
+        }
+        var dadosTratados = ["1","2","3"].map(returnInt);
+        document.write("<h2>" + dadosTratados + "</h2>");
+
+        document.write("<h2>" + dados.map(uppercase) + "</h2>");
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
