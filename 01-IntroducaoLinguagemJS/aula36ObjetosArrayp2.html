@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 36 - Objetos Array p2</title>
+
+    <script type="text/javascript">
+
+        var dados = ["wordpress", "Tabless" , "Web design", "Java", "PRogramação Web"];
+
+        /**
+         * Realizar cortes em String
+         *
+         * criar um array;
+         * alterar o separador padrão
+         * Localizar e mapear os separadores
+         * Realizar o corte
+         *
+         */
+        x = dados.join("*$)-");
+        y = x.indexOf("*$)-") + 4 ;
+        z = x.indexOf("*$)-", y) + 4;
+        z2= x.indexOf("*$)-", z) ;
+
+        resultado = x.slice(z,z2);
+
+        document.write("<h1>"+ resultado + "</h1>");
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
