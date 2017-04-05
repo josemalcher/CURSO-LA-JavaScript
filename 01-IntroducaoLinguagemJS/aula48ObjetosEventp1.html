@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 48 - Objetos Event</title>
+    <script type="text/javascript">
+        // Manipulador do Evento LOAD do Objeto Windows
+
+        window.onload = function () {
+            var x = document.getElementsByClassName("teste");
+            var y = '';
+
+            for (i = 0; i < x.length ; i++){
+                x[i].onclick = function () {
+                    y = this.innerHTML;
+                    escrever(y);
+                }
+            }
+        }
+        function escrever(t) {
+            document.title = t ;
+        }
+
+
+    </script>
+    <style type="text/css">
+        .teste{
+            width: 20px;
+            height: 20px;
+            background: #333;
+            font: 14px "Trebuchet MS";
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="teste" >1</div>
+    <div class="teste" >2</div>
+    <div class="teste" >3</div>
+    <div class="teste" >4</div>
+
+</body>
+</html>
