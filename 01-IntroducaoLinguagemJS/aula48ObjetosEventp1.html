@@ -11,14 +11,14 @@
             var y = '';
 
             for (i = 0; i < x.length ; i++){
-                x[i].onclick = function () {
-                    y = this.innerHTML;
-                    escrever(y);
-                }
+                x[i].addEventListener("click",ola,false);
             }
         }
         function escrever(t) {
             document.title = t ;
+        }
+        function ola() {
+            alert("Sucesso")
         }
 
 
