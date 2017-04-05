@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 48 - Objetos Event</title>
+    <script type="text/javascript">
+        // Manipulador do Evento LOAD do Objeto Windows
+
+        window.onload = function () {
+
+            var x = document.getElementById("alvo");
+            /*
+             x.onclick = function () {
+             return funcao1();
+             }
+             x.onclick = function () {
+             return funcao2();
+             }
+             }
+             function funcao1() {
+             alert("Teste 1");
+             return false;
+             }
+             function funcao2() {
+             alert("Teste 2");
+             return false;
+             */
+            /*x.addEventListener("click", function (e) {
+             e.preventDefault();
+             alert("Teste 1");
+             return false;
+             }, false);
+             x.addEventListener("click", function () {
+             alert("Teste 2");
+             return false;
+             }, false);
+             */
+            x.onclick = function (e) {
+                if(e){
+                    e.preventDefault();
+                }else{
+                    window.event.returnValue=false;
+                }
+                location.href='http://josemalcher.net';
+            }
+        };
+
+
+    </script>
+
+</head>
+<body>
+
+<a href="http://google.com.br" id="alvo">CLIQUE AQUI</a>
+
+</body>
+</html>
