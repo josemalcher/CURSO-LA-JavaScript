@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 50 - Objetos Event parte 3 - Fim modulo 1</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var x = document.getElementById("alvo");
+            var d = document.getElementById("mascara");
+
+            x.onclick = function (e) {
+                object = e ? e : window.event;
+
+                if (e) {
+                    object.preventDefault();
+                } else {
+                    object.returnValue = false;
+                }
+                //alert("X = " + object.clientX + " Y = " + object.clientY);
+                //eixoX = object.screenX;
+                //eixoY = object.screenY;
+                eixoX = object.clientX;
+                eixoY = object.clientY;
+                d.style.display = 'block';
+                d.style.top = eixoY + 'px';
+                d.style.left = eixoX + 'px';
+                if(object.ctrlKey){
+                    d.style.backgroundColor = 'green';
+                }else{
+                    d.style.backgroundColor = 'yellow';
+                }
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background: black;
+            position: absolute;
+            /*top: 50px;
+            left: 200px;*/
+            display: none;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #ffffff;
+            background: #900;
+            width: 300px;
+            height: 100px;
+            font: 30px "Trebuchet MS";
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+<a href="http://josemalcher.net" id="alvo">Clique AQUI!!!!!</a>
+<div id="mascara">
+
+</div>
+
+
+</body>
+</html>
