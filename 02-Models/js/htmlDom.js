@@ -18,7 +18,7 @@ window.onload = function() {
 
     var x = document.getElementById('titulo');
     var y = document.getElementsByClassName("titulo");
-    //var z = document.getElementsByName();
+    var z = document.getElementsByName("nome");
     //var h = document.getElementsByTagName();
 
     //alert(y);
@@ -26,5 +26,12 @@ window.onload = function() {
     input.value = "TESTE de acesso e atualização do html dom";
     input.size="100";
     input.disabled = "disabled";
+
+    for(i = 0 ; i < z.length ; i++){
+        alert(z[i]);
+    }
+
+    var s = document.querySelectorAll(".titulo")
+    alert(s[0])
 }
 
