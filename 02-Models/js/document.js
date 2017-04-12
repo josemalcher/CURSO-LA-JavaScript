@@ -33,5 +33,21 @@ window.onload  = function () {
     //inserindo o elemento no container
     container.appendChild(div);
 
+    //selecionando o elemento
+    var ul = document.getElementById("teste");
+
+    // Selecionanndo o nó de texto vazio
+    var texto = ul.firstChild;
+    //excluindo o nó de texto vazio
+    ul.removeChild(texto);
+
+
+    //Listandoo o primeiro elemento e Clonando o nó
+    var li = ul.childNodes.item(1).cloneNode(true);
+    //Atribuindo o nó
+    ul.appendChild(li);
+    //alert(li);
+    alert(ul.firstChild);
+
 
 }
