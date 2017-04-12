@@ -24,8 +24,8 @@
 
 window.onload = function () {
 
- /*   var ul = document.getElementsByTagName("ul").item(0);
-    alert(ul.childNodes.item(1));*/
+     var ul = document.getElementsByTagName("ul").item(0);
+    //alert(ul.childNodes.item(1));
 
     var p = document.getElementsByTagName("p").item(0);
     //alert(p.lastChild);
@@ -35,6 +35,14 @@ window.onload = function () {
     //alert(filho.nextSibling);
 
     var strong = document.getElementsByTagName("strong").item(0);
-    alert(strong.nodeName);
+    //alert(strong.nodeName);
+
+    var liPrimaria   = ul.childNodes.item(1);
+    var ulSecundaria = liPrimaria.childNodes.item(1);
+    var liSecundaria = ulSecundaria.childNodes.item(1);
+    var ulFinal  = liSecundaria.childNodes.item(1);
+    var liFinal = ulFinal.childNodes.item(1);
+    var texto = liFinal.firstChild.nodeValue;
+    alert(texto);
 
 }
