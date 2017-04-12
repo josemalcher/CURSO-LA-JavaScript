@@ -15,6 +15,11 @@
  *      - Filhos -> childNodes
  *      - Irmãos -> sibling  -> nextSibling & previusSibling
  *
+ *  - Caracteristicas do Nós
+ *      - nodeName
+ *      - nodeType
+ *      - nodeValue
+ *
  */
 
 window.onload = function () {
@@ -27,6 +32,9 @@ window.onload = function () {
     p.lastChild.setAttribute("style","color:red;") ;
 
     var filho = p.firstChild;
-    alert(filho.nextSibling);
+    //alert(filho.nextSibling);
+
+    var strong = document.getElementsByTagName("strong").item(0);
+    alert(strong.nodeName);
 
 }
