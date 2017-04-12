@@ -9,7 +9,17 @@ window.onload  = function () {
     var div     =       document.createElement("div");
 
     //Personalizando no css - adicionando atributo
-    div.setAttribute("class", "node");
+    //div.setAttribute("class", "node");
+
+    // Criando um atributo
+    var attr  =  document.createAttribute("class");
+    //atribuindo um valor para o atributo
+    attr.value  =  "attr";
+    //Inserindo o atributo no elemento
+    div.setAttributeNode(attr);
+
+    // REMOVENDO o atributo
+    //div.removeAttribute("class");
 
     //criando o texto
     var text    =       document.createTextNode("Exercicio de utilização do node api");
